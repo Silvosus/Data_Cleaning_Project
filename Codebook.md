@@ -1,36 +1,10 @@
-Data Set Information:
+The 88 variables of the final data set are (number in brackets is the position in the tidy data set):
 
-A series of experiments have been carried out with a group of 30 volunteers. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone on the waist. Using its embedded accelerometer and gyroscope, the scientist captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
-
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
-
-The data were on the WEB in 6 files:
-
-subject_test.txt
-subject_train.txt
-x_test.txt
-y_test.txt
-x_train.txt
-y_train.txt
-features.txt
-activity_labels.txt
-
-Transformation:
-
-It was binded the "training set" and the "test set" to create one data set.
-
-There were the same number of observations in x_test, y_test and subject_test, so they merged.
-There were the same number of observations in x_train, y_train and subject_train, so they merged.
-
-The features were added to each 561 variables.
-
-Were of interest only the variables with mean or standard deviation, so the remaining were deleted from the data set.
-
-The activity labels were added to each activity.
-
-The resultant data set variables were appropriately labeled with descriptive names.
-
-The 88 variables of the final data set are:
+- Activity label. 
+ [1] "activity"                                                              
+ 
+- An identifier of the subject who carried out the experiment.
+[2] "subject" 
  
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
  [3] "time_Body_acceleration__mean_X"                                        
@@ -45,7 +19,8 @@ The 88 variables of the final data set are:
 [11] "time_Gravity_acceleration_mean_Z"                                      
 [12] "time_Gravity_acceleration_std_X"                                       
 [13] "time_Gravity_acceleration_std_Y"                                       
-[14] "time_Gravity_acceleration_std_Z"                                       
+[14] "time_Gravity_acceleration_std_Z"
+                                       
 [15] "time_Body_acceleration_Jerk_mean_X"                                    
 [16] "time_Body_acceleration_Jerk_mean_Y"                                    
 [17] "time_Body_acceleration_Jerk_mean_Z"                                    
@@ -56,7 +31,8 @@ The 88 variables of the final data set are:
 [33] "time_Body_acceleration_Magnitude_mean"                                 
 [34] "time_Body_acceleration_Magnitude_std"                                  
 [35] "time_Gravity_acceleration_Magnitude_mean"                              
-[36] "time_Gravity_acceleration_Magnitude_std"                               
+[36] "time_Gravity_acceleration_Magnitude_std" 
+                              
 [37] "time_Body_acceleration_Jerk_Magnitude_mean"                            
 [38] "time_Body_acceleration_Jerk_Magnitude_std"                             
 
@@ -79,18 +55,20 @@ The 88 variables of the final data set are:
 [32] "time_Body_Gyroscope_Jerk_std_Z"                                        
 
 [39] "time_Body_Gyroscope_Magnitude_mean"                                    
-[40] "time_Body_Gyroscope_Magnitude_std"                                     
+[40] "time_Body_Gyroscope_Magnitude_std" 
+                                    
 [41] "time_Body_Gyroscope_Jerk_Magnitude_mean"                               
 [42] "time_Body_Gyroscope_Jerk_Magnitude_std"                                
 
-[84] "angletime_Body_Gyroscope_Mean_Gravity_Mean"                            
+[84] "angletime_Body_Gyroscope_Mean_Gravity_Mean" 
+                           
 [85] "angletime_Body_Gyroscope_JerkMean_Gravity_Mean"                        
 
 [86] "angleX_Gravity_Mean"                                                   
 [87] "angleY_Gravity_Mean"                                                   
 [88] "angleZ_Gravity_Mean"
 
-- A vector with frequency domain variables. 
+- Frequency domain variables. 
 
 [43] "frequency_domain_signals_Body_acceleration__mean_X"                    
 [44] "frequency_domain_signals_Body_acceleration__mean_Y"                    
@@ -130,11 +108,5 @@ The 88 variables of the final data set are:
 [78] "frequency_domain_signals_BodyBody_Gyroscope_Magnitude_meanFreq"        
 [79] "frequency_domain_signals_BodyBody_Gyroscope_Jerk_Magnitude_mean"       
 [80] "frequency_domain_signals_BodyBody_Gyroscope_Jerk_Magnitude_std"        
-[81] "frequency_domain_signals_BodyBody_Gyroscope_Jerk_Magnitude_meanFreq"   
-
-- activity label. 
- [1] "activity"                                                              
- 
-- An identifier of the subject who carried out the experiment.
-[2] "subject"                                                               
+[81] "frequency_domain_signals_BodyBody_Gyroscope_Jerk_Magnitude_meanFreq"                                                                 
 

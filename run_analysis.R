@@ -1,5 +1,3 @@
-tidy_data_set <- function(){
-  
   url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   zipfile <- "./getdata-projectfiles-UCI HAR Dataset.zip"
   
@@ -92,5 +90,4 @@ tidy_data_set <- function(){
   tidy_data <- tidy_data[, lapply(.SD, mean), by=list(tidy_data$activity,tidy_data$subject)]
   names(tidy_data)[1] <- 'activity'
   names(tidy_data)[2] <- 'subject'
-  write.csv(tidy_data,'tidy_data_set.csv',row.names=FALSE)
-}
+  write.table(tidy_data,'tidy_data_set.txt',row.names=FALSE)
