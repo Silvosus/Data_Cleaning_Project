@@ -29,7 +29,7 @@ The features were added to each 561 variables.
 
 Were of interest only the variables with mean or standard deviation, so the remaining were deleted from the data set.
 
-The activity labels were added to each activity.
+Labels were added to activities.
 
 The resultant data set variables were appropriately labeled with descriptive names.
 
